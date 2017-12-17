@@ -1,8 +1,8 @@
-import path from 'path';
+import path                           from 'path';
 
-import CleanWebpackPlugin from 'clean-webpack-plugin';
-import ExtractTextPlugin from 'extract-text-webpack-plugin';
-import HtmlWebpackPlugin from 'html-webpack-plugin';
+import CleanWebpackPlugin             from 'clean-webpack-plugin';
+import ExtractTextPlugin              from 'extract-text-webpack-plugin';
+import HtmlWebpackPlugin              from 'html-webpack-plugin';
 import { HotModuleReplacementPlugin } from 'webpack';
 
 const defaultEnv = {
@@ -94,7 +94,6 @@ export default (env = defaultEnv) => ({
     hotOnly: true,
     open: true,
     overlay: true,
-    port: 8080
   },
 
 });
