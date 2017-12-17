@@ -59,7 +59,7 @@ class Datetime extends React.Component {
                     { this.state.months[ this.state.date.getMonth() ] }&nbsp;
                     { this.state.date.getDate() },&nbsp;
                     { this.state.date.getFullYear() }
-                    </p>
+                </p>
                 <p className="time">
                     { this.state.hour() }:
                     { this.state.date.getMinutes() }
