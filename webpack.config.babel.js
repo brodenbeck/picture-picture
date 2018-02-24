@@ -39,7 +39,7 @@ export default (env = defaultEnv) => ({
   module: {
     rules: [
       {
-        test: /.jsx?$/,
+        test: /\.(js|jsx)?$/,
         exclude: /node_modules/,
         include: path.join(__dirname, 'src'),
         loader: [
@@ -53,6 +53,9 @@ export default (env = defaultEnv) => ({
               ],
               plugins: ['react-hot-loader/babel'],
             }
+          },
+          {
+              loader: 'eslint-loader'
           }
         ]
       },
