@@ -37,6 +37,11 @@ class Datetime extends React.Component {
                 if(hour > 12) hour -= 12;
                 return hour;
             },
+            minutes: () => {
+                let minutes = this.state.date.getMinutes();
+                if(minutes < 10) minutes = `0${minutes}`;
+                return minutes;
+            },
         };
     }
 
@@ -58,14 +63,14 @@ class Datetime extends React.Component {
         return (
             <div className="datetime">
                 <p className="date">
-                    {this.state.months[this.state.date.getMonth()]}&nbsp;
                     {this.state.days[this.state.date.getDay()]},&nbsp;
+                    {this.state.months[this.state.date.getMonth()]}&nbsp;
                     {this.state.date.getDate()},&nbsp;
                     {this.state.date.getFullYear()}
                 </p>
                 <p className="time">
                     {this.state.hour()}:
-                    {this.state.date.getMinutes()}
+                    {this.state.minutes()}
                     {this.state.date.getHours() >= 12 ? ' p.m.' : ' a.m.'}
                 </p>
             </div>
