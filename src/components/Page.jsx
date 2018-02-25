@@ -13,8 +13,4 @@ class Page extends React.Component {
     }
 }
 
-if (module.hot) {
-    module.hot.accept('./Datetime.jsx', Page.render);
-}
-
 export default Page;

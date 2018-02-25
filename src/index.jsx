@@ -17,6 +17,11 @@ function renderApp() {
 
 renderApp();
 
-if(module.hot) {
-    module.hot.accept('./components/Page.jsx', renderApp);
+// If the boiz are toasty
+if (module.hot) {
+    // This registers the Page and it's dependancy tree to be accepted as toasty boiz
+    module.hot.accept('./components/Page.jsx', () => {
+        const NextApp = Page.default;
+        renderApp();
+    });
 }
