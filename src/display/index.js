@@ -1,11 +1,12 @@
-import Vue from 'vue/dist/vue'
-import VueRouter from 'vue-router'
+import Vue from 'vue';
+import App from './App.vue';
+import router from './router';
+import store from './store';
 
-import { createRouter } from './router'
-
-Vue.use(VueRouter)
+Vue.config.productionTip = false;
 
 new Vue({
-    router: createRouter(),
-    template: '<router-view />'
-}).$mount('#parcel-root')
+  router,
+  store,
+  render: h => h(App),
+}).$mount('#parcel-root');
