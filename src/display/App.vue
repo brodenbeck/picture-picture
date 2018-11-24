@@ -1,16 +1,19 @@
 <template>
   <div>
-    <datetime></datetime>
+    <date-time></date-time>
+    <cat-fact></cat-fact>
   </div>
 </template>
 
 <script>
-import datetime from './components/datetime';
+import CatFact from './components/CatFact';
+import DateTime from './components/DateTime';
 
 export default {
   name: 'App',
   components: {
-    datetime,
+    'cat-fact': CatFact,
+    'date-time': DateTime,
   },
 };
 </script>
